@@ -2,3 +2,73 @@
 {"level":"info","message":"Server is listening on port","timestamp":"2023-06-04T06:52:42.093Z"}
 {"level":"info","message":"Database connected successfully","timestamp":"2023-06-04T06:53:39.287Z"}
 {"level":"info","message":"Server is listening on port","timestamp":"2023-06-04T06:53:39.300Z"}
+{"level":"info","message":"Database connected successfully","timestamp":"2023-06-04T06:54:07.485Z"}
+{"level":"info","message":"Server is listening on port","timestamp":"2023-06-04T06:54:07.496Z"}
+2023-06-04T08:33:33.014Z [undefined] info: Database connected successfully
+2023-06-04T08:33:33.019Z [undefined] info: Server is listening on port
+2023-06-04T08:33:55.028Z [undefined] info: Database connected successfully
+2023-06-04T08:33:55.035Z [undefined] info: Server is listening on port
+2023-06-04T08:35:58.072Z [right meow!] info: Database connected successfully
+2023-06-04T08:35:58.079Z [right meow!] info: Server is listening on port
+undefined [undefined] info: Database connected successfully
+undefined [undefined] info: Server is listening on port
+2023-06-04T08:37:15.497Z [right meow!] info: Database connected successfully
+2023-06-04T08:37:15.505Z [right meow!] info: Server is listening on port
+ [right meow!] info: Database connected successfully 2023-06-04T08:37:33.659Z
+ [right meow!] info: Server is listening on port 2023-06-04T08:37:33.666Z
+2023-06-04T08:37:53.019Z [right meow!] info: Database connected successfully
+2023-06-04T08:37:53.027Z [right meow!] info: Server is listening on port
+2023-06-04T08:40:09.787Z [undefined] info: Database connected successfully
+2023-06-04T08:40:09.794Z [undefined] info: Server is listening on port
+Sun Jun 04 2023 14:43:10 GMT+0600 (Bangladesh Standard Time) 14:43:10:413 info: Database connected successfully
+Sun Jun 04 2023 14:43:10 GMT+0600 (Bangladesh Standard Time) 14:43:10:424 info: Server is listening on port
+Sun Jun 04 2023 14:43:26 GMT+0600 (Bangladesh Standard Time) 14:43:26:9 [undefined] info: Database connected successfully
+Sun Jun 04 2023 14:43:26 GMT+0600 (Bangladesh Standard Time) 14:43:26:16 [undefined] info: Server is listening on port
+Sun Jun 04 2023 14:44:55:933 [undefined] info: Database connected successfully
+Sun Jun 04 2023 14:44:55:941 [undefined] info: Server is listening on port
+Sun Jun 04 2023 14:46:3:768 [right meow!] info: Database connected successfully
+Sun Jun 04 2023 14:46:3:776 [right meow!] info: Server is listening on port
+Sun Jun 04 2023 14:47:6:87 [right meow!] info: Database connected successfully
+Sun Jun 04 2023 14:47:6:94 [right meow!] info: Server is listening on port
+Sun Jun 04 2023 14:49:17:313 [right meow!] info: Database connected successfully
+Sun Jun 04 2023 14:49:17:320 [right meow!] info: Server is listening on port
+{
+  message: 'Database connected successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-04T08:50:10.698Z'
+}
+{
+  level: 'info',
+  message: 'Server is listening on port',
+  label: 'right meow!',
+  timestamp: '2023-06-04T08:50:10.707Z'
+}
+{
+  message: 'Database connected successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-04T08:50:31.183Z'
+}
+{
+  level: 'info',
+  message: 'Server is listening on port',
+  label: 'right meow!',
+  timestamp: '2023-06-04T08:50:31.192Z'
+}
+{
+  message: 'Database connected successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-06-04T08:50:47.879Z'
+}
+{
+  level: 'info',
+  message: 'Server is listening on port',
+  label: 'right meow!',
+  timestamp: '2023-06-04T08:50:47.887Z'
+}
+Sun Jun 04 2023 14:52:22:748 info: Database connected successfully
+Sun Jun 04 2023 14:52:22:756 info: Server is listening on port
+Sun Jun 04 2023 14:53:17:806 info: Database connected successfully
+Sun Jun 04 2023 14:53:17:813 info: Server is listening on port
