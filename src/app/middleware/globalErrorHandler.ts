@@ -5,11 +5,12 @@ import ApiError from '../../errors/ApiError';
 import handleValidationError from '../../errors/handleValidationError';
 import { IGenericErrorMessage } from '../../interfaces/error';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any, no-unused-vars, @typescript-eslint/no-unused-vars
 const globalErrorHander = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   err: any,
   req: Request,
   res: Response,
+  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   next: NextFunction
 ) => {
   let statusCode = 500;
