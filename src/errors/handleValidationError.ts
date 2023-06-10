@@ -1,11 +1,10 @@
 import mongoose from 'mongoose';
 import { IGenericErrorResponse } from '../interfaces/common';
 import { IGenericErrorMessage } from '../interfaces/error';
-// eslint-disable-next-line no-unused-vars
-const handleValidationError: (
-  // eslint-disable-next-line no-unused-vars
+
+const handleValidationError = (
   err: mongoose.Error.ValidationError
-) => IGenericErrorResponse = (err: mongoose.Error.ValidationError) => {
+): IGenericErrorResponse => {
   const errors: IGenericErrorMessage[] = Object.values(err.errors).map(ele => {
     return {
       path: ele?.path,

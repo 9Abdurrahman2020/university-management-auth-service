@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
 import globalErrorHander from './app/middleware/globalErrorHandler';
-import { userRoute } from './app/modules/users/user.router';
+import { userRoute } from './app/modules/user/user.router';
 
 const app: Application = express();
 app.use(cors());
