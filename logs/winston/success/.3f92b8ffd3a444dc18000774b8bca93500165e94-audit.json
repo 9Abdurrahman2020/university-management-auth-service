@@ -1,20 +1,15 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\.3f92b8ffd3a444dc18000774b8bca93500165e94-audit.json",
-  "files": [
-    {
-      "date": 1686330920877,
-      "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-09-23.log",
-      "hash": "fc53af2471d8542d88410638eb8eda2dec3f7293aff06e4c1fe1f2fbf860805b"
+    "keep": {
+        "days": true,
+        "amount": 14
     },
-    {
-      "date": 1686333607345,
-      "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-10-00.log",
-      "hash": "a4df96bd54953f0e797d0229996b92748ad9497658f47422dc6d1de72e29c3ac"
-    }
-  ],
-  "hashType": "sha256"
+    "auditLog": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\.3f92b8ffd3a444dc18000774b8bca93500165e94-audit.json",
+    "files": [
+        {
+            "date": 1686374171370,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-10-11.log",
+            "hash": "08a69053bfd55b1ecb16c397b47e390410eee2d5207c7eb343c7c623fe711377"
+        }
+    ],
+    "hashType": "sha256"
 }

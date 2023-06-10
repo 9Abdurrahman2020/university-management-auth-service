@@ -1,18 +1,12 @@
-import { NextFunction, Request, Response } from 'express';
+import { ErrorRequestHandler } from 'express';
 import { Error } from 'mongoose';
 import config from '../../config';
 import ApiError from '../../errors/ApiError';
 import handleValidationError from '../../errors/handleValidationError';
 import { IGenericErrorMessage } from '../../interfaces/error';
 
-const globalErrorHander = (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  err: any,
-  req: Request,
-  res: Response,
-  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-  next: NextFunction
-) => {
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+const globalErrorHander: ErrorRequestHandler = (err, req, res, next) => {
   let statusCode = 500;
   let message = 'Something went wrong !';
   let errorMessage: IGenericErrorMessage[] = [];

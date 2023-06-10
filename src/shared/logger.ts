@@ -18,6 +18,7 @@ const infoLogger = createLogger({
   format: combine(timestamp(), myFormat),
   transports: [
     new transports.Console(),
+    // eslint-disable-next-line no-constant-condition
     new DailyRotateFile({
       filename: path.join(
         process.cwd(),
@@ -54,4 +55,4 @@ const errorLogger = createLogger({
   ],
 });
 
-export { infoLogger, errorLogger };
+export { errorLogger, infoLogger };

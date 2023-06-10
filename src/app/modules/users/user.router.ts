@@ -1,7 +1,7 @@
 import express from 'express';
-import userHandler from './users.handler';
+import { userHandler } from './user.handler';
 const router = express.Router();
 
 router.post('/user-create', userHandler.createUserHandler);
 
-export default router;
+export const userRoute = { router };
