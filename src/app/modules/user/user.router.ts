@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post(
   '/user-create',
-  validateRequest.validateUserRequest(userValidation.createUserZodSchema),
+  validateRequest(userValidation.createUserZodSchema),
   userHandler.createUserHandler
 );
 
