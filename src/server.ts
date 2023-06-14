@@ -4,7 +4,7 @@ import app from './app';
 import config from './config/index';
 import { errorLogger, infoLogger } from './shared/logger';
 
-const port = config.port || 5000;
+const PORT = config.port || 5000;
 
 let server: Server;
 
@@ -12,8 +12,8 @@ let server: Server;
   try {
     await mongoose.connect(config.database_url as string);
     infoLogger.info('Database connected successfully');
-    server = app.listen(port, () => {
-      infoLogger.info('Server is listening on port', port);
+    server = app.listen(PORT, () => {
+      infoLogger.info(`Server is listening on port: ${PORT}`);
     });
   } catch (err) {
     errorLogger.error("Couldn't connect to database", err);

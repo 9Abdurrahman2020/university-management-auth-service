@@ -59,6 +59,41 @@
             "date": 1686465609347,
             "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-11-12.log",
             "hash": "d693532238b8699c3e1975386a4342c8df4f2817812ad24943b5450a1e096c2e"
+        },
+        {
+            "date": 1686467284192,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-11-13.log",
+            "hash": "f266bb1f028857ca9178593d0b1c794d1a10253a55f489f3daaeb54f94319541"
+        },
+        {
+            "date": 1686472144755,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-11-14.log",
+            "hash": "d5c82090182acd451daaa5067200d2b812b82a91f9c47767ef7bd64db92b5ab6"
+        },
+        {
+            "date": 1686474097730,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-11-15.log",
+            "hash": "4779f993e792d969225661075bbcf57c18ef309919eabbbe0215af04ff712349"
+        },
+        {
+            "date": 1686563100362,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-12-15.log",
+            "hash": "fb1096672478b763555ab7a8ff5ca448cd9094bd807dcf5485f31dacac23469b"
+        },
+        {
+            "date": 1686567143627,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-12-16.log",
+            "hash": "4f7c7c06e9b6307ccc5ab835a4f7a97151ed1bb8610256110bfcb90fcd95f29f"
+        },
+        {
+            "date": 1686569801858,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-12-17.log",
+            "hash": "dea7063c1cd1310c9c2e004e6141d8d065cb8a04be32238ddd6c160e22bc259e"
+        },
+        {
+            "date": 1686580720515,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-12-20.log",
+            "hash": "1e30919c4652be9fd2b24560d318bf2c7f99f528c1383c267d6443f6b26f473e"
         }
     ],
     "hashType": "sha256"

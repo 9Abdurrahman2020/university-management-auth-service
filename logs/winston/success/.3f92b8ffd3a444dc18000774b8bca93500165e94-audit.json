@@ -59,6 +59,41 @@
             "date": 1686465609335,
             "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-11-12.log",
             "hash": "dee6f37416d81f804a21f6433c705684d5efab834c55bd81c030b5f9bda8d0cc"
+        },
+        {
+            "date": 1686467284183,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-11-13.log",
+            "hash": "49a51683cd2e2da4f7f521c45888982bc8ff13d0000aa7965141d26e5875a380"
+        },
+        {
+            "date": 1686472144751,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-11-14.log",
+            "hash": "1cb8249981df9ca369e6212b5a5c3597f1f998d9f33becec0d281b66c31ed374"
+        },
+        {
+            "date": 1686474097719,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-11-15.log",
+            "hash": "bd23ffafb40dd4f47b7336660b9e02b8236497fd1176bc82da6523dc3dab1872"
+        },
+        {
+            "date": 1686563100338,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-12-15.log",
+            "hash": "75fa3047bc635c7a23257f20bf43530186f8fc7a6d18b51d241030381316efbf"
+        },
+        {
+            "date": 1686567143615,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-12-16.log",
+            "hash": "2c0c58dbf08d86b983bb6cf82cb0fd85970ed156a11cbf60d959909b31a5b44c"
+        },
+        {
+            "date": 1686569801848,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-12-17.log",
+            "hash": "80046fa6f64c5a34c3051de7f7a7f6b103e3fee48bf007b4e1fffa21d6f9dc88"
+        },
+        {
+            "date": 1686580720498,
+            "name": "D:\\Next-level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-12-20.log",
+            "hash": "17e56065a63fdcefe004f430de04cd5b27fb54411959c12de79432103acf8043"
         }
     ],
     "hashType": "sha256"

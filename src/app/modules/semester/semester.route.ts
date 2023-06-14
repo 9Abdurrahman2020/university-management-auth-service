@@ -9,6 +9,7 @@ router.post(
   validateRequest(createSemesterZodValidation),
   semesterHandlers.handleCreateSemester
 );
+router.get('/', semesterHandlers.handleGetAllSemester);
 
 export const semesterRoute = {
   router,
