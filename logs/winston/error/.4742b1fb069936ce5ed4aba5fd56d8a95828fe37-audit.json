@@ -1,0 +1,70 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\.4742b1fb069936ce5ed4aba5fd56d8a95828fe37-audit.json",
+  "files": [
+    {
+      "date": 1686837525522,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-15-19.log",
+      "hash": "cf5b1f3f9da714eb136d307f71f44c48a667a2b359cfb1eff4b454b69cc039ac"
+    },
+    {
+      "date": 1686838238324,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-15-20.log",
+      "hash": "bdfe7cedcdc5282f409ce52ce6d96251d2fddc59f32b3e7cd927f49d8ac6c419"
+    },
+    {
+      "date": 1686909486646,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-16-15.log",
+      "hash": "7e40f730ffee9a058ea16a6ed3cb6c71182679fe4f0026a684d2c012b42faec5"
+    },
+    {
+      "date": 1686923925402,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-16-19.log",
+      "hash": "81881e05a8c41bfc006716e3f67bf736667a166e37fea66542043d0cb88833d3"
+    },
+    {
+      "date": 1686924005326,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-16-20.log",
+      "hash": "c34309a6b7638f58b281493db217eb38f1a95c5bd2c7750774488bdc09982ec6"
+    },
+    {
+      "date": 1686927759875,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-16-21.log",
+      "hash": "ac83e0433e894db4f825919b3f33e4c1459c0f56266b57443aeda0c0e06cf928"
+    },
+    {
+      "date": 1686931206219,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-16-22.log",
+      "hash": "a0cdb20d28c5d70d4354979bd0d0cf40d25481bda826d1cef357e3fcd5b8de2b"
+    },
+    {
+      "date": 1686935033445,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-16-23.log",
+      "hash": "79448b78ccbcef23f600c26d3eff09227ae8e5908eb5abf275c398757440ac9d"
+    },
+    {
+      "date": 1686973225284,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-17-09.log",
+      "hash": "884fa02750bd90bb5145b4333af128da13cd84f92192b702a72ae7099084b426"
+    },
+    {
+      "date": 1686974696413,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-17-10.log",
+      "hash": "35b15881bfdb7a8d9fba4c88c3fb437a06033ade2f030401875f17c3427f1957"
+    },
+    {
+      "date": 1686978161667,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-17-11.log",
+      "hash": "dedbf75eacbb29dbdad493193d5afbe6d23ef6b22363ca79f19bcc425db2cbd5"
+    },
+    {
+      "date": 1686981606299,
+      "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-17-12.log",
+      "hash": "f14f183e79bcd5487c8270cada5491f36756664d985f9973a60ce27970a8ba5b"
+    }
+  ],
+  "hashType": "sha256"
+}

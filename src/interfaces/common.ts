@@ -10,6 +10,7 @@ export type IGenericResponse<T> = {
   meta: {
     page: number;
     limit: number;
+    resultCount: number;
     total: number;
   };
   data: T;

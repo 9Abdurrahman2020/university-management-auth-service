@@ -1,13 +1,15 @@
+import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { paginationFields } from '../../../constants/pagination';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import { catchAsync } from '../../../shared/catchAsync';
 import { pick } from '../../../shared/pick';
 import { sendResponse } from '../../../shared/sendResponse';
-import { ISemester } from './semester.interface';
+import { semesterFilterableFields } from './semester.constant';
+import { ISemester, ISemesterFilter } from './semester.interface';
 import { semesterService } from './semester.service';
 
-const handleCreateSemester = catchAsync(async (req, res) => {
+const createSemester = catchAsync(async (req: Request, res: Response) => {
   const body = req.body;
   const result = await semesterService.createSemester(body);
   const responseData = {
@@ -18,8 +20,8 @@ const handleCreateSemester = catchAsync(async (req, res) => {
   };
   sendResponse<ISemester>(res, responseData);
 });
-const handleGetAllSemester = catchAsync(async (req, res) => {
-  const filter: { searchTerm: string } = pick(req.query, ['searchTerm']);
+const getAllSemester = catchAsync(async (req: Request, res: Response) => {
+  const filter = pick(req.query, semesterFilterableFields);
   const paginationOptions: IPaginationOptions = pick(
     req.query,
     paginationFields
@@ -27,7 +29,7 @@ const handleGetAllSemester = catchAsync(async (req, res) => {
 
   const result = await semesterService.getAllSemester(
     paginationOptions,
-    filter
+    filter as ISemesterFilter
   );
   const responseData = {
     statusCode: StatusCodes.OK,
@@ -38,8 +40,42 @@ const handleGetAllSemester = catchAsync(async (req, res) => {
   };
   sendResponse(res, responseData);
 });
+const getSingleSemester = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const result = await semesterService.getSingleSemesterById(id);
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'Successfully retrive semester',
+    data: result,
+  });
+});
+const updateSemester = catchAsync(async (req: Request, res: Response) => {
+  const id: string = req.params.id;
+  const updateData: Partial<ISemester> = req.body;
+  const result = await semesterService.updateSemester(id, updateData);
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'Semester update successfully',
+    data: result,
+  });
+});
+const deleteSemester = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const result = await semesterService.deleteSemester(id);
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'Semester deleted successfully',
+    data: result,
+  });
+});
 
 export const semesterHandlers = {
-  handleCreateSemester,
-  handleGetAllSemester,
+  createSemester,
+  getAllSemester,
+  getSingleSemester,
+  updateSemester,
+  deleteSemester,
 };
