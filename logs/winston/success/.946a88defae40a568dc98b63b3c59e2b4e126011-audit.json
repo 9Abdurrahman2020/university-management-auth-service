@@ -79,6 +79,16 @@
             "date": 1686996535831,
             "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-17-16.log",
             "hash": "41cd92ba00f57318f470982ae91f09df8808e79224397529ffc760c677f693e6"
+        },
+        {
+            "date": 1687000006947,
+            "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-17-17.log",
+            "hash": "a3ffe2af7831970c6c2299b4123b2d42537a8b712a02be066d039b571f299234"
+        },
+        {
+            "date": 1687003276508,
+            "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\success\\uma-success-2023-06-17-18.log",
+            "hash": "7ab1c4f1c8c76bfafe7cbca64df90bb1871a3ae282b78789ec23689da3b0dfb9"
         }
     ],
     "hashType": "sha256"

@@ -79,6 +79,16 @@
             "date": 1686996535837,
             "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-17-16.log",
             "hash": "00aaa0d1ff696d6249be1d34497162bf73c3462984a162f83826cd36f70af486"
+        },
+        {
+            "date": 1687000006951,
+            "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-17-17.log",
+            "hash": "49a492072548e6ff4115e4dd27fbc8993f6e1ee1188a569fd8e880f04b89af93"
+        },
+        {
+            "date": 1687003276514,
+            "name": "D:\\Next_Level\\university-management-auth-service\\logs\\winston\\error\\uma-error-2023-06-17-18.log",
+            "hash": "cfe1ce85714fd1780a890c2f3fc605f656abfe162107edfd45d11aef30fd9344"
         }
     ],
     "hashType": "sha256"

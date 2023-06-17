@@ -16,7 +16,7 @@ const semesterSchema = new Schema<ISemester, SemesterModel>(
     startMonth: { type: String, enum: semesterMonths, required: true },
     endMonth: { type: String, enum: semesterMonths, required: true },
   },
-  { timestamps: true }
+  { timestamps: true, toJSON: { virtuals: true} }
 );
 
 semesterSchema.pre('save', async function (next) {
@@ -32,6 +32,6 @@ semesterSchema.pre('save', async function (next) {
 });
 
 export const Semester = model<ISemester, SemesterModel>(
-  'semester',
+  'Semester',
   semesterSchema
 );

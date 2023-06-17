@@ -3,7 +3,9 @@ import { FacultyModel, IFaculty } from './faculty.interface';
 
 const facultySchema = new Schema<IFaculty, FacultyModel>({
   title: { type: String, required: true },
-});
+},{timestamps: true, toJSON:{
+  virtuals: true
+}});
 
 export const Faculty = model<IFaculty, FacultyModel>(
   'Faculties',
