@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose';
+import { userRole } from './user.constants';
 import { IUser, UserModel } from './user.interface';
 
 const userSchema = new Schema<IUser, UserModel>(
@@ -7,15 +8,27 @@ const userSchema = new Schema<IUser, UserModel>(
     password: { type: String, required: true },
     role: {
       type: String,
-      enum: ['Student', 'Faculty', 'Admin'],
+      enum: userRole,
       required: true,
+    },
+    student: {
+      type: Schema.Types.ObjectId,
+      ref: 'Student',
+    },
+    faculty: {
+      type: Schema.Types.ObjectId,
+      ref: 'Faculty',
+    },
+    admin: {
+      type: Schema.Types.ObjectId,
+      ref: 'Admin',
     },
   },
   {
     timestamps: true,
     toJSON: {
-      virtuals: true
-    }
+      virtuals: true,
+    },
   }
 );
 

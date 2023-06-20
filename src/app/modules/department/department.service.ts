@@ -7,7 +7,7 @@ import { Department } from './department.model';
 
 const createDepartment = async (payload: IDepartment): Promise<IDepartment> => {
   const newFaculty = new Department(payload);
-  const result = (await newFaculty.save()).populate('faculty');
+  const result = (await newFaculty.save()).populate('academicFaculty');
   return result;
 };
 const getAllDepartments = async (
@@ -22,28 +22,33 @@ const getAllDepartments = async (
   };
   const andConditions = [];
   // implimenting search query
-  if(searchTerm){
+  if (searchTerm) {
     andConditions.push({
-        $or: departmentSearchableFields.map(field=>({
-            [field]: {
-                $regex: searchTerm,
-                $options: 'i'
-            }
-        }))
-    })
+      $or: departmentSearchableFields.map(field => ({
+        [field]: {
+          $regex: searchTerm,
+          $options: 'i',
+        },
+      })),
+    });
   }
   // implimenting filter query
-  if(Object.keys(filterFields).length){
+  if (Object.keys(filterFields).length) {
     andConditions.push({
-        $and: Object.entries(filterFields).map(([field, value])=>({
-            [field]: value
-        }))
-    })
+      $and: Object.entries(filterFields).map(([field, value]) => ({
+        [field]: value,
+      })),
+    });
   }
-  
-  const whereCondition = andConditions.length>0? { $and: andConditions } : {} ;
 
-  const result = await Department.find(whereCondition).populate('faculty').sort(sortOption).skip(skip).limit(limit);
+  const whereCondition =
+    andConditions.length > 0 ? { $and: andConditions } : {};
+
+  const result = await Department.find(whereCondition)
+    .populate('academicFaculty')
+    .sort(sortOption)
+    .skip(skip)
+    .limit(limit);
   const resultCount = await Department.find(whereCondition)
     .sort(sortOption)
     .skip(skip)
@@ -60,23 +65,28 @@ const getAllDepartments = async (
     },
   };
 };
-const getSingleDepartment = async (id: string): Promise<IDepartment | null> =>{
-  const result = await Department.findById(id).populate('faculty');
+const getSingleDepartment = async (id: string): Promise<IDepartment | null> => {
+  const result = await Department.findById(id).populate('academicFaculty');
   return result;
-}
-const updateDepartment = async (id: string, payload: Partial<IDepartment>): Promise<IDepartment | null>=>{
-  const result = await Department.findOneAndUpdate({_id: id}, payload, { new: true}).populate('faculty');
+};
+const updateDepartment = async (
+  id: string,
+  payload: Partial<IDepartment>
+): Promise<IDepartment | null> => {
+  const result = await Department.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  }).populate('academicFaculty');
   return result;
-}
-const deleteDepartment = async (id: string): Promise<IDepartment | null> =>{
+};
+const deleteDepartment = async (id: string): Promise<IDepartment | null> => {
   const result = await Department.findByIdAndDelete(id);
   return result;
-}
+};
 
 export const departmentService = {
-   createDepartment,
-   getAllDepartments,
-   getSingleDepartment,
-   updateDepartment,
-   deleteDepartment
+  createDepartment,
+  getAllDepartments,
+  getSingleDepartment,
+  updateDepartment,
+  deleteDepartment,
 };

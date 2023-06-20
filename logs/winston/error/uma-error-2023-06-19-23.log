@@ -1,0 +1,4 @@
+Mon Jun 19 2023 23:45:44:69 error: Attempted illegal state transition from [TRANSACTION_COMMITTED] to [TRANSACTION_ABORTED]
+Mon Jun 19 2023 23:45:44:71 error: Attempted illegal state transition from [TRANSACTION_COMMITTED] to [TRANSACTION_ABORTED]
+Mon Jun 19 2023 23:54:34:121 error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+Mon Jun 19 2023 23:55:0:391 error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]

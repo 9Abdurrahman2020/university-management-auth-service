@@ -15,3 +15,13 @@ export type IGenericResponse<T> = {
   };
   data: T;
 };
+export type IGender = 'male' | 'female' | 'other';
+export type IBloodGroup =
+  | 'A+'
+  | 'A-'
+  | 'B+'
+  | 'B-'
+  | 'AB-'
+  | 'AB+'
+  | 'O+'
+  | 'O-';

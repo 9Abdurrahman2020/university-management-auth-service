@@ -28,47 +28,47 @@ const getAllDepartments = catchAsync(async (req: Request, res: Response) => {
   sendResponse(res, {
     statusCode: StatusCodes.OK,
     success: true,
-    message: "Successfully retrived departments",
+    message: 'Successfully retrived departments',
     data: result.data,
-    meta: result.meta
-  })
+    meta: result.meta,
+  });
 });
-const getSingleDepartment = catchAsync( async (req: Request, res: Response)=>{
+const getSingleDepartment = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const result = await departmentService.getSingleDepartment(id);
   sendResponse(res, {
     statusCode: StatusCodes.OK,
     success: true,
-    message:"Successfully retrived department",
-    data: result
-  })
-})
-const updateDepartment = catchAsync( async (req: Request, res: Response)=>{
+    message: 'Successfully retrived department',
+    data: result,
+  });
+});
+const updateDepartment = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const updateData = req.body;
   const result = await departmentService.updateDepartment(id, updateData);
   sendResponse(res, {
     statusCode: StatusCodes.OK,
     success: true,
-    message:"Successfully updated department",
-    data: result
-  })
-})
-const deleteDepartment = catchAsync( async (req: Request, res: Response)=>{
+    message: 'Successfully updated department',
+    data: result,
+  });
+});
+const deleteDepartment = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const result = await departmentService.deleteDepartment(id);
   sendResponse(res, {
     statusCode: StatusCodes.OK,
     success: true,
-    message: "successfully deleted department",
-    data: result
-  })
-})
+    message: 'successfully deleted department',
+    data: result,
+  });
+});
 
 export const departmentHandler = {
-   createDepartment,
+  createDepartment,
   getAllDepartments,
-   getSingleDepartment,
-   updateDepartment,
-   deleteDepartment
+  getSingleDepartment,
+  updateDepartment,
+  deleteDepartment,
 };

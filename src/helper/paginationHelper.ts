@@ -20,7 +20,7 @@ const paginationQueryHelper = (
     page = 1,
     limit = 10,
     sortBy = 'createdAt',
-    sortOrder = 'desc',
+    sortOrder = 'asc',
   } = options;
   const skip = (page - 1) * limit;
   return {

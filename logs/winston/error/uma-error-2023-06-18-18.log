@@ -1,0 +1,4 @@
+Sun Jun 18 2023 18:9:58:248 error: Cannot call abortTransaction after calling commitTransaction
+Sun Jun 18 2023 18:10:58:365 error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
+Sun Jun 18 2023 18:12:45:186 error: Cannot call abortTransaction after calling commitTransaction
+Sun Jun 18 2023 18:17:22:43 error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_ABORTED]
