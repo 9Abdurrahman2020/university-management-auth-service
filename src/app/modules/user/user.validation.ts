@@ -60,12 +60,15 @@ const createStudentUserZodSchema = z.object({
       profileImage: z
         .string({ required_error: 'Profile image url is needed' })
         .optional(),
-        academicSemester: z
-        .string({ required_error: 'Academic Semiser id is needed' }),
-        academicDepartment: z
-        .string({ required_error: 'Academic Department id is needed' }),
-        academicFaculty: z
-        .string({ required_error: 'Academic Faculty id is needed' }),
+      academicSemester: z.string({
+        required_error: 'Academic Semiser id is needed',
+      }),
+      academicDepartment: z.string({
+        required_error: 'Academic Department id is needed',
+      }),
+      academicFaculty: z.string({
+        required_error: 'Academic Faculty id is needed',
+      }),
     }),
   }),
 });
@@ -100,12 +103,13 @@ const createFacultyUserZodSchema = z.object({
       profileImage: z
         .string({ required_error: 'Profile image url is needed' })
         .optional(),
-      academicDepartment: z
-        .string({ required_error: 'Academic Department id is needed' }),
-      academicFaculty: z
-        .string({ required_error: 'Academic Faculty id is needed' }),
-      designation: z
-        .string({ required_error: 'Designation is needed' }),
+      academicDepartment: z.string({
+        required_error: 'Academic Department id is needed',
+      }),
+      academicFaculty: z.string({
+        required_error: 'Academic Faculty id is needed',
+      }),
+      designation: z.string({ required_error: 'Designation is needed' }),
     }),
   }),
 });
@@ -139,16 +143,14 @@ const createAdminUserZodSchema = z.object({
       profileImage: z
         .string({ required_error: 'Profile image url is needed' })
         .optional(),
-      department: z
-        .string({ required_error: 'Department id is needed' }),
-      designation: z
-        .string({ required_error: 'Designation is needed' }),
+      department: z.string({ required_error: 'Department id is needed' }),
+      designation: z.string({ required_error: 'Designation is needed' }),
     }),
   }),
 });
 
 export const userValidation = {
-   createStudentUserZodSchema,
-   createFacultyUserZodSchema,
-   createAdminUserZodSchema
+  createStudentUserZodSchema,
+  createFacultyUserZodSchema,
+  createAdminUserZodSchema,
 };

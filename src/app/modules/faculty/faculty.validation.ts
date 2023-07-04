@@ -1,13 +1,15 @@
-import { z } from "zod";
-import { bloodGroup, gender } from "../../../constants/human";
+import { z } from 'zod';
+import { bloodGroup, gender } from '../../../constants/human';
 
 const facultyUpdateZodValidation = z.object({
   body: z.object({
-    name: z.object({
-      firstName: z.string().optional(),
-      middleName: z.string().optional(),
-      lastName: z.string().optional(),
-    }).optional(),
+    name: z
+      .object({
+        firstName: z.string().optional(),
+        middleName: z.string().optional(),
+        lastName: z.string().optional(),
+      })
+      .optional(),
     gender: z.enum([...gender] as [string, ...string[]]).optional(),
     dateOfBirth: z.string().optional(),
     email: z.string().email().optional(),
@@ -15,18 +17,14 @@ const facultyUpdateZodValidation = z.object({
     emergencyContactNo: z.string().optional(),
     presentAddress: z.string().optional(),
     permanentAddress: z.string().optional(),
-    bloodGroup: z
-      .enum([...bloodGroup] as [string, ...string[]])
-      .optional(),
-    profileImage: z
-      .string()
-      .optional(),
+    bloodGroup: z.enum([...bloodGroup] as [string, ...string[]]).optional(),
+    profileImage: z.string().optional(),
   }),
   academicDepartment: z.string().optional(),
   academicFaculty: z.string().optional(),
   designation: z.string().optional(),
-})
+});
 
 export const facultyValidation = {
-    facultyUpdateZodValidation
-}
+  facultyUpdateZodValidation,
+};

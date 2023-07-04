@@ -1,3 +1,4 @@
+/* eslint-disable no-undefined */
 import { ISemester } from '../semester/semester.interface';
 import { User } from './user.model';
 

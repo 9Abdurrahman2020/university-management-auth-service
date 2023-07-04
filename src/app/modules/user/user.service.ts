@@ -1,6 +1,7 @@
 import { StatusCodes } from 'http-status-codes';
 import mongoose from 'mongoose';
 import config from '../../../config';
+import { ENUM_USER_ROLES } from '../../../enum/user.role';
 import ApiError from '../../../errors/ApiError';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
@@ -22,7 +23,7 @@ const createUserAndStudent = async (
     user.password = config.default_student_pass as string;
   }
   // set user role
-  user.role = 'student';
+  user.role = ENUM_USER_ROLES.STUDENT;
   // get semester to generate id
   const semester = await Semester.findById(student.academicSemester);
   // creating a sessin with mongoose
@@ -44,7 +45,7 @@ const createUserAndStudent = async (
       throw new ApiError(StatusCodes.BAD_REQUEST, 'Failed to create user');
     }
     session.commitTransaction();
-    session.endSession;
+    // session.endSession();
     let newUserData = null;
     newUserData = await User.findOne({ id: newUser[0].id }).populate({
       path: 'student',
@@ -63,7 +64,7 @@ const createUserAndStudent = async (
     return newUserData;
   } catch (error) {
     session.abortTransaction();
-    session.endSession();
+    // session.endSession();
     throw error;
   }
 };
@@ -76,7 +77,7 @@ const createUserAndFaculty = async (
     user.password = config.default_student_pass as string;
   }
   // set user role
-  user.role = 'faculty';
+  user.role = ENUM_USER_ROLES.FACULTY;
   // creating a sessin with mongoose
   const session = await mongoose.startSession();
   try {
@@ -96,8 +97,8 @@ const createUserAndFaculty = async (
       throw new ApiError(StatusCodes.BAD_REQUEST, 'Failed to create user');
     }
     session.commitTransaction();
-    session.endSession;
-    let newUserData = await User.findOne({ id: newUser[0].id }).populate({
+    // session.endSession();
+    const newUserData = await User.findOne({ id: newUser[0].id }).populate({
       path: 'faculty',
       populate: [
         {
@@ -105,13 +106,13 @@ const createUserAndFaculty = async (
         },
         {
           path: 'academicFaculty',
-        }
+        },
       ],
     });
     return newUserData;
   } catch (error) {
     session.abortTransaction();
-    session.endSession();
+    // session.endSession();
     throw error;
   }
 };
@@ -124,7 +125,7 @@ const createUserAndAdmin = async (
     user.password = config.default_student_pass as string;
   }
   // set user role
-  user.role = 'admin';
+  user.role = ENUM_USER_ROLES.ADMIN;
   // creating a sessin with mongoose
   const session = await mongoose.startSession();
   try {
@@ -144,19 +145,19 @@ const createUserAndAdmin = async (
       throw new ApiError(StatusCodes.BAD_REQUEST, 'Failed to create user');
     }
     session.commitTransaction();
-    session.endSession;
-    let newUserData = await User.findOne({ id: newUser[0].id }).populate({
+    // session.endSession();
+    const newUserData = await User.findOne({ id: newUser[0].id }).populate({
       path: 'admin',
       populate: [
         {
           path: 'department',
-        }
+        },
       ],
     });
     return newUserData;
   } catch (error) {
     session.abortTransaction();
-    session.endSession();
+    // session.endSession();
     throw error;
   }
 };
@@ -164,5 +165,5 @@ const createUserAndAdmin = async (
 export const userServices = {
   createUserAndStudent,
   createUserAndFaculty,
-  createUserAndAdmin
+  createUserAndAdmin,
 };

@@ -21,4 +21,4 @@ router.patch(
 router.delete('/:id', departmentHandler.deleteDepartment);
 router.get('/', departmentHandler.getAllDepartments);
 
-export const departmentRouter = router
+export const departmentRouter = router;

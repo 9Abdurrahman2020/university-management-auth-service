@@ -1,7 +1,13 @@
 import { Schema, model } from 'mongoose';
-import { AcademicFacultyModel, IAcademicFaculty } from './academicFaculty.interface';
+import {
+  AcademicFacultyModel,
+  IAcademicFaculty,
+} from './academicFaculty.interface';
 
-const academicFacultySchema = new Schema<IAcademicFaculty, AcademicFacultyModel>(
+const academicFacultySchema = new Schema<
+  IAcademicFaculty,
+  AcademicFacultyModel
+>(
   {
     title: { type: String, required: true },
   },
@@ -13,4 +19,7 @@ const academicFacultySchema = new Schema<IAcademicFaculty, AcademicFacultyModel>
   }
 );
 
-export const AcademicFaculty = model<IAcademicFaculty, AcademicFacultyModel>('AcademicFaculty', academicFacultySchema);
+export const AcademicFaculty = model<IAcademicFaculty, AcademicFacultyModel>(
+  'AcademicFaculty',
+  academicFacultySchema
+);

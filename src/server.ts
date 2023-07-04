@@ -31,12 +31,12 @@ let server: Server;
 })();
 // handle uncaughtException error
 process.on('uncaughtException', err => {
- console.log(err);
+  console.log(err);
   process.exit(1);
 });
 // handle server if we got any signal to terminate the server
 process.on('SIGTERM', signal => {
- console.log(signal);
+  console.log(signal);
   if (server) {
     server.close();
   }

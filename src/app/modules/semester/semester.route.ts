@@ -21,4 +21,4 @@ router.patch(
 router.delete('/:id', semesterHandlers.deleteSemester);
 router.get('/', semesterHandlers.getAllSemester);
 
-export const semesterRoute = router
+export const semesterRoute = router;

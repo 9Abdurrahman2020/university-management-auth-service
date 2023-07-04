@@ -2,10 +2,15 @@ import { paginationHelper } from '../../../helper/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import { academicFacultySearchableFields } from './academicFaculty.constants';
-import { IAcademicFaculty, IAcademicFacultyFilters } from './academicFaculty.interface';
+import {
+  IAcademicFaculty,
+  IAcademicFacultyFilters,
+} from './academicFaculty.interface';
 import { AcademicFaculty } from './academicFaculty.model';
 
-const createFaculty = async (payload: IAcademicFaculty): Promise<IAcademicFaculty> => {
+const createFaculty = async (
+  payload: IAcademicFaculty
+): Promise<IAcademicFaculty> => {
   const newFaculty = new AcademicFaculty(payload);
   const result = await newFaculty.save();
   return result;
@@ -64,7 +69,9 @@ const getAllFaculties = async (
     },
   };
 };
-const getSingleFaculty = async (id: string): Promise<IAcademicFaculty | null> => {
+const getSingleFaculty = async (
+  id: string
+): Promise<IAcademicFaculty | null> => {
   const result = await AcademicFaculty.findById(id);
   return result;
 };

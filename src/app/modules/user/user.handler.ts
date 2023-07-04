@@ -38,7 +38,7 @@ const createAdminUserHandler = catchAsync(async (req, res) => {
 });
 
 export const userHandler = {
- createStudentUserHandler,
- createFacultyUserHandler,
- createAdminUserHandler
+  createStudentUserHandler,
+  createFacultyUserHandler,
+  createAdminUserHandler,
 };

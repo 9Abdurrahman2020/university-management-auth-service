@@ -4,7 +4,11 @@ import { DepartmentModel, IDepartment } from './department.interface';
 const departmentSchema = new Schema<IDepartment, DepartmentModel>(
   {
     title: { type: String, required: true },
-    academicFaculty: { type: Types.ObjectId, required: true, ref: 'AcademicFaculty' },
+    academicFaculty: {
+      type: Types.ObjectId,
+      required: true,
+      ref: 'AcademicFaculty',
+    },
   },
   {
     timestamps: true,
