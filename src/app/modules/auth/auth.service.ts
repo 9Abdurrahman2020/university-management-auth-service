@@ -1,10 +1,12 @@
+import bcrypt from 'bcrypt';
 import { StatusCodes } from 'http-status-codes';
-import { Secret } from 'jsonwebtoken';
+import { JwtPayload, Secret } from 'jsonwebtoken';
 import config from '../../../config';
 import ApiError from '../../../errors/ApiError';
 import { jwtHelper } from '../../../helper/jwtHelper';
 import { User } from '../user/user.model';
 import {
+  IChangePassData,
   ILoginData,
   ILoginServiceReturn,
   IRefreshTokenServiceReturn,
@@ -82,7 +84,31 @@ const refreshToken = async (
   };
 };
 
+const changePassword = async (user: JwtPayload, payload: IChangePassData) => {
+  const { newPassword, oldPassword } = payload;
+  const isUserExist = await User.findOne({ id: user.userId }).select(
+    '+password'
+  );
+
+  if (!isUserExist) {
+    throw new ApiError(StatusCodes.NOT_FOUND, 'User not exist');
+  }
+  const isPasswordMatched = await bcrypt.compare(
+    oldPassword,
+    isUserExist.password
+  );
+  if (!isPasswordMatched) {
+    throw new ApiError(StatusCodes.UNAUTHORIZED, "Password didn't match");
+  }
+  isUserExist.password = newPassword;
+  isUserExist.needPasswordChange = false;
+  isUserExist.passwordChangedAt = new Date();
+  await isUserExist.save();
+  return true;
+};
+
 export const authService = {
   login,
   refreshToken,
+  changePassword,
 };

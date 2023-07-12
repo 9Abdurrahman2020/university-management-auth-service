@@ -41,13 +41,11 @@ const createUserAndStudent = async (
     // set student _id into user to create reference of student into user
     user.student = newStudent[0]._id;
     const newUser = await User.create([user], { session });
+    session.commitTransaction();
     if (!newUser.length) {
       throw new ApiError(StatusCodes.BAD_REQUEST, 'Failed to create user');
     }
-    session.commitTransaction();
-    // session.endSession();
-    let newUserData = null;
-    newUserData = await User.findOne({ id: newUser[0].id }).populate({
+    const newUserData = await User.findOne({ id: newUser[0].id }).populate({
       path: 'student',
       populate: [
         {
@@ -64,7 +62,6 @@ const createUserAndStudent = async (
     return newUserData;
   } catch (error) {
     session.abortTransaction();
-    // session.endSession();
     throw error;
   }
 };
